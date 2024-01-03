@@ -7,7 +7,7 @@ import DataCard from "./DataCard";
  
 function SimpleSlider() { 
   const [mData, setData] = useState(Data); 
-  console.log(mData); 
+  
   return (
   
       <DataCard mData={mData}/>

@@ -27,22 +27,22 @@ function DataCard({mData}){
       <div className="container">
         <div className="slider1">
           <div className="sliderRight">
-            {mData.map((curElem) => {
-              return(
-                <> 
-                  <Slider className="cat" {...settings} key={curElem.id}>
-                    <div className="cat-item">
+            <Slider className="cat">
+              {mData.map((curElem) => {
+                return(
+                  <>
+                    <div className="cat-item"  {...settings} key={curElem.id}>
                       <div className="cat-item_div">
-                        <img src={app1} alt="" />
-                        <h3> </h3>
+                        <h3>{curElem.name}</h3>
+                        <img src={curElem.image} alt="" />
                       </div>
-                      <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
-                    </div>  
-                  </Slider> 
-                </>
+                      <p>{curElem.des}</p>
+                    </div> 
+                  </>
                 )
-            })}
-        </div>
+              })} 
+            </Slider> 
+          </div>
         </div>
       </div> 
     </>

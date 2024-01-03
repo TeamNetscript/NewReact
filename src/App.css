@@ -163,7 +163,7 @@ header{
   display: block;
   width: 100%;
   box-sizing: border-box;
-  background-color: #181f7c;
+  background-color: #fff;
   top: 0px;
   left: 0px;
   z-index: 2;
@@ -173,7 +173,7 @@ header{
 .Logo{
   font-size: 28px; 
   font-weight: bold;
-  color: #fff;
+  color: #000;
   text-decoration: none; 
 }
 .Newsletter{
@@ -211,8 +211,7 @@ header{
   width: 100%;
   height: auto;
   box-sizing: border-box; 
-  background-size: cover;
-  flex-direction: column; 
+  background-size: cover; 
       display: flex;
     gap: 15px; 
     padding: 120px 0 50px; 
@@ -221,7 +220,7 @@ header{
 }
 
 .admin a{
-  color: #181f7c;
+  color: #fff;
     font-size: 15px;
     display: flex;
     gap: 7px;
@@ -229,7 +228,7 @@ header{
     align-items: center;
     padding: 13px 25px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #181f7c;
     font-weight: 700;
 }
 navbar{
@@ -250,7 +249,7 @@ navbar ul{
   align-items: center;
 }
 navbar ul a{
-  color: #fff;
+  color: #000;
   font-weight: 500;
   text-decoration: none;
   padding: 5px;
@@ -260,7 +259,7 @@ navbar ul a:hover{
 }
 .main_hero{
   padding-bottom: 0px;
-  background: #181f7c;
+  background: #fff;
   position: relative;
 } 
 .Venue{
@@ -368,7 +367,15 @@ navbar ul a:hover{
   width: 100%;
 }
 .heroLeft{
-  flex: 100%;
+  flex: 60%;
+  text-align: left;
+  display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 1150px;
+}
+.heroRight{
+  flex: 40%;
   text-align: center;
   display: flex;
     flex-direction: column;
@@ -381,16 +388,9 @@ navbar ul a:hover{
 }
 .heroLeft p{
   display: block;
-  color: #fff;
+  color: #000;
   margin-bottom: 50px;
-  padding: 10px 20%;
-}
-.heroRight{
-  flex: 100%;
-  text-align: center;
-  position: relative;
-  display: flex; 
-    align-items: center;
+  padding: 10px 30% 10px 0%;
 }
 .heroRight div{
   position: relative;
@@ -414,8 +414,8 @@ navbar ul a:hover{
   max-width: 550px;
 }
 .heroLeft h1{
-  color: #fff;
-  font-size: 2em; 
+  color: #181f7c;
+  font-size: 1.8em; 
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 15px;
@@ -434,18 +434,18 @@ navbar ul a:hover{
   margin: 10px;
 }
 .heroLeft p a{
-      color: #181f7c;
+      color: #fff;
     font-size: 18px;
     font-weight: 700;
-    background: #fff; 
+    background: #181f7c; 
     padding: 10px 25px;
     border-radius: 6px;
-    border: 1px solid #fff;
+    border: 1px solid #181f7c;
 }
-.heroLeft p .outline-a{
-  color: #fff; 
-background: transparent; 
-border: 1px solid #fff;
+.heroLeft p .outline-a{ 
+  color: #181f7c;
+  background: transparent;
+  border: 1px solid #181f7c;
 }
 a{
   text-decoration: none;
