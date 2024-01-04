@@ -21,12 +21,12 @@
   gap: 25px;
 }
 .App{
-  padding: 70px 0px;
+  padding: 90px 0px;
   position: relative;
   display: block;
 }
 .mt-7{
-  margin-top: 70px;
+  margin-top: 90px;
 }
 .App li img{ 
   position: relative;
@@ -53,12 +53,12 @@
   text-decoration: none;
   padding: 10px 0px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   color: #000;
 }
 .App li p a:hover{  
   text-decoration: underline; 
-  font-weight: 600;
+  font-weight: 400;
   color: #d86253;
 }
 .App ul li{
@@ -135,7 +135,7 @@ table {
 }
 .Venue_Sec{
   background-color: #fff;
-  padding: 50px 0px;
+  padding: 90px 0px;
 }
 .App-logo {
   height: 40vmin;
@@ -172,7 +172,7 @@ header{
 }
 .Logo{
   font-size: 28px; 
-  font-weight: bold;
+  font-weight: 400;
   color: #181f7c;
   text-decoration: none;
   position: relative; 
@@ -185,7 +185,7 @@ header{
   max-width: 190px;
 }
 .Newsletter{
-  padding: 70px 0px;
+  padding: 90px 0px;
   background: #f2f3ff;
   position: relative;
   text-align: center;
@@ -209,7 +209,7 @@ header{
     background: #181f7c;
     border: 1px solid #181f7c;
     font-size: 16px;
-    font-weight: 700; 
+    font-weight: 400; 
     padding: 10px 25px;
     border-radius: 6px;
     margin: 10px;
@@ -263,7 +263,7 @@ navbar ul{
 }
 navbar ul a{
   color: #181f7c;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   padding: 5px;
 }
@@ -410,7 +410,7 @@ navbar ul a:hover{
 .heroLeft span, .heroLeft b{
   color: #181f7c;
   font-size: 3em; 
-  font-weight: 900;
+  font-weight: 400;
   line-height: 1.2;
   margin-bottom: 15px;
   z-index: 1;
@@ -441,7 +441,7 @@ navbar ul a:hover{
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 15px;
 } 
 .heroRight img {
@@ -460,7 +460,7 @@ navbar ul a:hover{
 .heroLeft p a{
       color: #fff;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     background: #181f7c; 
     padding: 10px 25px;
     border-radius: 50px;
@@ -524,7 +524,7 @@ h3{
 }
 .tipsleft h2{
   font-size: 2.5em;
-  font-weight: 900;
+  font-weight: 400;
   position: relative;
   display: block;
   margin-bottom: 15px;
@@ -683,7 +683,7 @@ h3{
 .cat-item p a{
   color: #d86253;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
   position: relative;
   display: block;
@@ -771,7 +771,7 @@ h3{
 } 
 .bannerSlide .cat-item p a{
   color: #d86253; 
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
   position: relative;
   padding: 0px!important;
@@ -878,7 +878,7 @@ h3{
 }
 .fbook{
   text-decoration: none!important ;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 16px;
   position: relative;
   padding-bottom: 15px;
@@ -916,7 +916,7 @@ h3{
   font-size: 34px;
   line-height: 1.3;
   position: relative;
-  font-weight: bold;
+  font-weight: 400;
   letter-spacing: 1px;
 }
 .copyRights  { 
@@ -985,14 +985,14 @@ h3{
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
 }
 .tectTitle h3{
   color: #2b2b2b;
   font-size: 24px;
   position: relative;
   margin-bottom: 0px;
-  font-weight: 700;
+  font-weight: 400;
 }
 .tectTitle p{
   color: #7a7a7a;

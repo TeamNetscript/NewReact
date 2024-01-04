@@ -17,8 +17,8 @@ function Home() {
       <Hero/> 
       <Tech/>
       <Tips/>
-      <Venue/>
       <Newsletter/>
+      <Venue/>
       <Sliders/>
     </> 
   )
