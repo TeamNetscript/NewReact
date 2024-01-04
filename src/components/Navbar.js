@@ -7,7 +7,7 @@ function Navbar() {
       <header>
         <div class="container">
           <navbar>
-            <a href="#" className="Logo">NetScript</a>
+            <a href="#" className="Logo"><img src="images/logo.png"/></a>
             <ul>
               <NavLink to="/">Home</NavLink>
               <NavLink to="/tips">Tips</NavLink>
