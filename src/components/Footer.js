@@ -24,7 +24,7 @@ function Footer(){
 					</div> 
 				</div>
 				<div className="copyRights">
-					<p>&copy; | Shopify Store. All Right Reserved.</p>
+					<p>&copy; Comapny - All Right Reserved</p>
 				</div>
 			</div>
 		</div>

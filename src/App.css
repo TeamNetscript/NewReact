@@ -28,6 +28,19 @@
 .mt-7{
   margin-top: 90px;
 }
+.job_div{
+  position: relative;
+  display: flex;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+} 
+.jobs{
+  position: relative;
+  display: block;
+  padding: 70px 0px;
+}
 .App li img{ 
   position: relative;
   display: block;
@@ -105,6 +118,7 @@ time, mark, audio, video, h1, h2, h3, h4, h5, h6 {
   border: 0;
   font-family: 'Manrope', sans-serif;
   vertical-align: baseline;
+  font-weight: 400;
 } 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -135,7 +149,7 @@ table {
 }
 .Venue_Sec{
   background-color: #fff;
-  padding: 90px 0px;
+  padding: 90px 0px 0px 0px;
 }
 .App-logo {
   height: 40vmin;
@@ -162,18 +176,17 @@ header{
   display: block;
   width: 100%;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: #0a0e46;
   top: 0px;
   left: 0px;
   z-index: 2;
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
-  box-shadow: 0px 2px 7px #f1f1f1;
 }
 .Logo{
   font-size: 28px; 
   font-weight: 400;
-  color: #181f7c;
+  color: #fff;
   text-decoration: none;
   position: relative; 
 }
@@ -203,6 +216,7 @@ header{
   font-size: 2.7em;
   line-height: 1.4;
   margin-bottom: 55px;
+  font-weight: 400;
 }
 .NewsletterInfo a{
   color: #fff;
@@ -235,7 +249,7 @@ header{
     text-decoration: none;
     align-items: center;
     padding: 15px 25px;
-    border-radius: 50px;
+    border-radius: 6px;
     background-color: #181f7c;
     font-weight: 400;
     background: linear-gradient(45deg, #131a76, #4350ff);
@@ -262,7 +276,7 @@ navbar ul{
   align-items: center;
 }
 navbar ul a{
-  color: #181f7c;
+  color: #fff;
   font-weight: 400;
   text-decoration: none;
   padding: 5px;
@@ -409,9 +423,9 @@ navbar ul a:hover{
 }
 .heroLeft span, .heroLeft b{
   color: #181f7c;
-  font-size: 3em; 
+  font-size: 3.1em; 
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   margin-bottom: 15px;
   z-index: 1;
   position: relative;
@@ -447,23 +461,20 @@ navbar ul a:hover{
 .heroRight img {
     width: 100%;
     height: auto;
-    border-radius: 50px;
+    border-radius: 6px;
     position: relative;
     display: block;
     background-color: #dadcff;
     padding: 5px;
-    border-bottom: 5px solid #aaaccf;
-}
+} 
 .heroLeft p a{
   margin: 10px 10px 10px 0px;
-}
-.heroLeft p a{
       color: #fff;
     font-size: 16px;
     font-weight: 400;
     background: #181f7c; 
     padding: 10px 25px;
-    border-radius: 50px;
+    border-radius: 6px;
     border: 1px solid #181f7c;
 }
 .heroLeft p .outline-a{ 
@@ -485,7 +496,7 @@ a{
   align-items: center;
   width: 100%;
   height: auto;
-  padding: 50px 0px 50px 0px;
+  padding: 90px 0px 90px 0px;
   gap: 50px;
 }
 .Tips{
@@ -499,6 +510,7 @@ h2{
   font-size: 2em;
   margin-bottom: 10px;
   position: relative;
+  font-weight: 400;
   display: block;
   line-height: 1.2;
 }
@@ -612,12 +624,11 @@ h3{
 .tipsRight img{
   width: 100%;
   height: auto;
-  border-radius: 30px;
+  border-radius: 6px;
   position: relative;
   display: block;
   background-color: #dadcff;
   padding: 5px;
-  border-bottom: 5px solid #aaaccf;
 }
 .link{
   border: 2px solid #6c757d;
@@ -644,12 +655,13 @@ h3{
 }
 .cat-item{
   position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-    padding: 25px;
-    border-radius: 6px;
-    margin: 10px 5px;
-    border: 1px solid #f2f3ff;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 25px;
+  border-radius: 6px;
+  margin: 10px 5px;
+  border: 0px solid #f2f3ff;
+  box-shadow: 0px 2px 10px #e1e1e1;
 }
 .cat-item a{
   transition: 0.3s ease-in-out;
@@ -951,6 +963,9 @@ h3{
   position: relative;
   display: block;
 }
+.venueTitle p{
+  color: #7a7a7a;
+}
 .techInfo{
   position: relative;
 }
@@ -1014,13 +1029,59 @@ h3{
     background-color: #fff;
     border-radius: 6px;
 }
+.job_div li{
+  position: relative;
+    width: 28%;
+    padding: 25px 25px;
+    border: 0px solid #f5f5f5;
+    transition: 0.2s ease-in-out;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 2px 10px #e1e1e1;
+    max-width: 100%;
+}
 .techSinfo:hover{ 
     border: 2px solid #30378938;
 }
-.techSinfo p{
+.job_div li:hover{   
+    transition: 0.2s ease-in-out;
+    background-color: #0a0e46; 
+    box-shadow: 0px 2px 10px #e1e1e1;
+    max-width: 100%;
+    color: #fff;
+}
+.techSinfo p, .job_div p{
   color: #7a7a7a;
 }
-.techSinfo span{
+.job_div li:hover p{
+  color: #fff;
+}
+.job_nav{
+  position: relative;
+  display: block;
+}
+.job_nav ul{
+  background-color: #f3f3f6;
+  border-radius: 50px;
+  position: relative;
+  display: block;
+  margin: 0 auto 30px;
+  padding: 5px;
+  width: 100%;
+  max-width: 40%;
+}
+.job_nav ul li.active{
+  background-color: #fff; 
+}
+.job_nav ul li{ 
+  position: relative;
+  display: inline-block;
+  padding: 7px 25px;
+  border-radius: 50px;
+  text-align: center;
+  margin-right: 5px;
+}
+.techSinfo span {
 position: relative;
     display: inline-block;
     font-size: 12px;
@@ -1032,7 +1093,45 @@ position: relative;
     width: 40px;
     height: 50px;
 }
-.techSinfo span i{
+.job_div span{
+position: relative;
+    display: inline-block;
+    background-color: #0a0e46;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px; 
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.job_div li:hover span{
+position: relative;
+    display: inline-block;
+    background-color: #fff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px; 
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+.job_div li:hover span i{
+  color: #0a0e46;
+}
+ .job_div span i{
+  color: #fff;
+      position: absolute;
+    right: 0px;
+    bottom: 0px;
+    font-size: 24px;
+    left: 0px;
+    top: 0px;
+    margin: auto;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.techSinfo span i {
   color: #181f7c;
       position: absolute;
     right: 0px;
@@ -1044,7 +1143,7 @@ position: relative;
     width: 30px;
     height: 30px;
 }
-.techSinfo h5{
+.techSinfo h5, .job_div h3{
   font-size: 22px;
   line-height: 24px;
 }

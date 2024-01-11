@@ -1,14 +1,22 @@
-import React, { Component } from "react"; 
+import React, { Component, useState } from "react";
+import NewsContent from "./NewsContent";
 
 function Newsletter() {
+
+  const[Ndata, setData] = useState(NewsContent);
+
   return (
      <>
       <div className="Newsletter">
         <div className="container">
-        <div className="NewsletterInfo">
-              <h1><b>Elevate your social media presence today! Clock now.</b></h1>
-              <p><a href="#">Get a Quote</a> <a href="#" className="outline-a">Schedule a Call</a></p>
-            </div>
+          {Ndata.map((curElem) => { 
+            return(
+              <div className="NewsletterInfo" key={curElem.id}>
+                <h1>{curElem.title}</h1>
+                <p>{curElem.a1} {curElem.a2}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </>

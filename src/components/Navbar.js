@@ -5,17 +5,17 @@ function Navbar() {
   return (
      <>
       <header>
-        <div class="container">
+        <div className="container">
           <navbar>
-            <a href="#" className="Logo"><img src="images/logo.png"/></a>
+            <NavLink to="/" className="Logo">Company</NavLink>
             <ul>
               <NavLink to="/">Home</NavLink>
-              <NavLink to="/tips">Tips</NavLink>
+              <NavLink to="/jobs">Career</NavLink>
               <NavLink to="/form">Form</NavLink>
               <NavLink to="/sliders">Slider</NavLink>
             </ul>
             <div className="admin">
-              <a href="#"><i className="fa fa-arrow-right"></i> Contact Us</a>
+              <NavLink to="/form"><i className="fa fa-arrow-right"></i> Contact Us</NavLink>
             </div>
           </navbar> 
         </div>

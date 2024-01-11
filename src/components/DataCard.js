@@ -8,7 +8,7 @@ const settings = {
   infinite: true,
   speed: 500, 
   centerMode: false,
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 1,
   responsive: [
     {
@@ -27,11 +27,11 @@ function DataCard({mData}){
       <div className="container">
         <div className="slider1">
           <div className="sliderRight">
-            <Slider className="cat" >
+            <Slider className="cat" {...settings}>
               {mData.map((curElem) => { 
                 return(
                   <>
-                    <div className="cat-item"  {...settings}  key={curElem.id}>
+                    <div className="cat-item"  key={curElem.id}>
                       <div className="cat-item_div">
                         <img src={curElem.image} alt="" />
                         <h3>{curElem.name}</h3>

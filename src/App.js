@@ -10,6 +10,7 @@ import Form from './components/Form.js';
 import Venue from './components/Venue.js';
 import Sliders from './components/Sliders.js';
 import Footer from './components/Footer.js';
+import Jobs from './components/Jobs.js';
 import {BrowserRouter} from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 
@@ -19,7 +20,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/tips" element={<Tips/>} />
+          <Route path="/jobs" element={<Jobs/>} />
           <Route path="/form" element={<Form/>} />
           <Route path="/sliders" element={<Sliders/>} />
         </Routes>
