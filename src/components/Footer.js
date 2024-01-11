@@ -15,7 +15,7 @@ function Footer(){
 					<div className="footerInfo">
 						<div className="footerInfoData1">
 							<div className="fMail">
-								<h3>Start a project</h3>
+								<h3>Start a project</h3> 
 								<a href="mailto:contact@salesboost.com"> contact@salesboost.com</a>
 								<div className="fSpace"></div>
 								<a href="#" className="fbook"> Book a free consultation</a>
