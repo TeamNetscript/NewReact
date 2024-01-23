@@ -34,6 +34,9 @@ function Hero() {
               <li>
                 <img src="images/google.png" alt=""/>
               </li>
+              <li>
+                <img src="images/facebook.png" alt=""/>
+              </li>
             </ul>
           </div>
         </div>
