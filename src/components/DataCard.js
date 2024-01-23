@@ -46,7 +46,7 @@ function DataCard({mData}){
         </div>
       </div> 
     </>
-  );
+  ); 
 }
 
 export default DataCard;

@@ -18,16 +18,13 @@ function Form() {
           </div>
           <form> 
             <label>
-              <input
-                placeholder="First Name"
-                onChange={(e) => setFirstName(e.target.value)}
-              />   
+              <input placeholder="First Name" onChange={(e) => setFirstName(e.target.value)} />   
             </label>
             <label>
-              <input
-                placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
-              /> 
+              <input placeholder="Middle Name" onChange={(e) => setFirstName(e.target.value)} />   
+            </label>
+            <label>
+              <input placeholder="Password" onChange={(e) => setPassword(e.target.value)} /> 
             </label>
             <button type="submit">Submit</button>
           </form>

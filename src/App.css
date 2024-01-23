@@ -51,6 +51,40 @@
 .App li a:hover   img{
   opacity: 0.9;
 }
+.companyList{
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 20px; 
+  z-index: 1;
+  box-sizing: border-box;
+}
+.companyList:before{
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 20px;
+  width: 100%;
+  max-width: 60%; 
+  height: 100%;
+  background-color: #9742bf;
+  background: linear-gradient(270deg, #9742bf, transparent); 
+  box-sizing: border-box;
+}
+.companyList ul{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.companyList ul li img{
+  width: 120px;
+  height: auto;  
+  padding: 15px;
+  position: relative;
+  display: block;
+}
 .App li a{ 
   position: relative;
   display: block;
@@ -172,20 +206,19 @@ table {
   }
 }
 header{
-  position: sticky;
+  position: absolute;
   display: block;
   width: 100%;
   box-sizing: border-box;
-  background-color: #0a0e46;
+  background-color: transparent;
   top: 0px;
   left: 0px;
-  z-index: 2;
-  -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
+  z-index: 2; 
+  background-image: linear-gradient(90deg, #fff0, #fff0);
 }
 .Logo{
   font-size: 28px; 
-  font-weight: 400;
+  font-weight: 700;
   color: #fff;
   text-decoration: none;
   position: relative; 
@@ -211,8 +244,18 @@ header{
   max-width: 950px;
   margin: 0 auto;
 }
+.main_hero:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(1deg, #040630d4, #01042091);
+  z-index: 0;
+}
 .NewsletterInfo h1{
-  color: #181f7c;
+  color: #0b052e;
   font-size: 2.7em;
   line-height: 1.4;
   margin-bottom: 55px;
@@ -220,12 +263,12 @@ header{
 }
 .NewsletterInfo a{
   color: #fff;
-    background: #181f7c;
-    border: 1px solid #181f7c;
+    background: #0b052e;
+    border: 1px solid #0b052e;
     font-size: 16px;
     font-weight: 400; 
-    padding: 10px 25px;
-    border-radius: 6px;
+    padding: 12px 25px;
+    border-radius: 50px;
     margin: 10px;
 }
 .hero{
@@ -234,13 +277,24 @@ header{
   height: auto;
   box-sizing: border-box; 
   background-size: cover; 
-      display: flex;
-    gap: 15px; 
-    padding: 120px 0 120px; 
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  gap: 15px; 
+  padding: 190px 0 120px 0px; 
+  justify-content: center;
+  align-items: center;
 }
-
+.heroCareer{
+  position: relative; 
+  width: 100%;
+  height: auto;
+  box-sizing: border-box; 
+  background-size: cover; 
+  display: flex;
+  gap: 15px; 
+  padding: 150px 0 50px 0px; 
+  justify-content: center;
+  align-items: center;
+}
 .admin a{
   color: #fff;
     font-size: 15px;
@@ -249,10 +303,10 @@ header{
     text-decoration: none;
     align-items: center;
     padding: 15px 25px;
-    border-radius: 6px;
-    background-color: #181f7c;
+    border-radius: 50px;
+    background-color: #6c3685;
     font-weight: 400;
-    background: linear-gradient(45deg, #131a76, #4350ff);
+    background: linear-gradient(45deg, #6c3685, #000);
     transition: 6s ease-in-out;
 }
 .admin a:hover{  
@@ -266,6 +320,18 @@ navbar{
   width: 100%;
   justify-content: space-between;
   align-items: center;
+}
+.main_hero:before {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  left: 0px;
+  top: 0px;
+  background-image: url(./office.jpg);
+  background-size: cover;
+  border-radius: 0%;
 }
 navbar ul{
   display: flex;
@@ -282,7 +348,7 @@ navbar ul a{
   padding: 5px;
 }
 navbar ul a:hover{ 
-  text-decoration: underline;
+  text-decoration: none;
 }
 .main_hero{
   padding-bottom: 0px;
@@ -394,18 +460,22 @@ navbar ul a:hover{
   width: 100%;
 }
 .heroLeft{
-  flex: 50%;
+  flex: 70%;
   text-align: left;
   display: flex;
     flex-direction: column;
     justify-content: flex-start; 
+    z-index: 1;
 }
 .heroRight{
-  flex: 50% 1;
-    text-align: right;
-    display: flex;
-    justify-content: flex-end; 
-    align-items: center;
+  flex: 30% 1;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 50px;
+  box-sizing: border-box;
+  z-index: 1;
 }
 .heroLeft div{
   position: relative;
@@ -416,25 +486,34 @@ navbar ul a:hover{
   position: absolute;
   width: 100%;
   height: 15px;
-  background-color: #e7e8f2;
+  background-color: #6c3685;
   left: 0px;
-  bottom: -5px;
+  bottom: -15px;
   z-index: 0;
 }
-.heroLeft span, .heroLeft b{
-  color: #181f7c;
-  font-size: 3.1em; 
+.heroLeft h2{
+  color: #fff;
+  font-size: 48px; 
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.4;
   margin-bottom: 15px;
   z-index: 1;
   position: relative;
-}  
+} 
+.heroLeft span, .heroLeft b{
+  color: #fff; 
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  z-index: 1;
+  position: relative;
+} 
 .heroLeft p{
   display: block;
-  color: #000;
+  color: #bbbbbb;
   margin-bottom: 30px;
   padding: 10px 30% 10px 0%;
+  z-index: 1;
 }
 .heroRight div{
   position: relative;
@@ -451,7 +530,7 @@ navbar ul a:hover{
   background-color: #1a1052;
 }
 .heroLeft h6 {
-    color: #181f7c;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
@@ -461,7 +540,7 @@ navbar ul a:hover{
 .heroRight img {
     width: 100%;
     height: auto;
-    border-radius: 6px;
+    border-radius: 0px;
     position: relative;
     display: block;
     background-color: #dadcff;
@@ -472,21 +551,21 @@ navbar ul a:hover{
       color: #fff;
     font-size: 16px;
     font-weight: 400;
-    background: #181f7c; 
-    padding: 10px 25px;
-    border-radius: 6px;
-    border: 1px solid #181f7c;
+    background: #6c3685; 
+    padding: 12px 25px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #6c3685, #000);
 }
 .heroLeft p .outline-a{ 
-  color: #181f7c;
+  color: #0b052e;
   background: transparent;
-  border: 1px solid #181f7c;
+  border: 1px solid #0b052e;
   transition: 0.2s ease-in-out;
 }
 .heroLeft p .outline-a:hover{ 
   color: #fff;
-  background: #181f7c;
-  border: 1px solid #181f7c;
+  background: #0b052e;
+  border: 1px solid #0b052e;
 }
 a{
   text-decoration: none;
@@ -527,7 +606,7 @@ h3{
   display: block;
 }
 .tipsleft span{
-  color: #181f7c;
+  color: #0b052e;
   font-size: 16px;
   letter-spacing: 2px;
   position: relative;
@@ -551,15 +630,15 @@ h3{
   color: #7a7a7a;
 }
 .tipsleft button{
-  background-color: #181f7c;
+  background-color: #0b052e;
   font-size: 16px;
   position: relative;
   display: block;
   margin-bottom: 15px;
   color: #fff;
   border: 0px;
-  border-radius: 6px;
-  padding: 10px 15px;
+  border-radius: 50px;
+  padding: 12px 25px; 
   cursor: pointer;
 }
 .tipsleft ul{
@@ -572,6 +651,9 @@ h3{
   gap: 15px;
   margin-bottom: 25px;
 }
+.form_main form{
+  padding: 15px 0px;
+}
 .form_main{
   position: relative;
   display: block;
@@ -581,7 +663,7 @@ h3{
   margin: 0 auto;
 }
 .form_main input{
-  padding: 10px;
+  padding: 12px;
   position: relative;
   border: 1px solid #dedede;
   width: 100%;
@@ -595,7 +677,7 @@ h3{
   position: relative;
   display: block;
   margin-bottom: 10px;
-  background-color: #181f7c;
+  background-color: #0b052e;
   padding: 10px 25px;
   border: 0px;
   color: #fff;
@@ -612,8 +694,8 @@ h3{
   color: #2b2b2b;
 }
 .tipsleft ul li i{
-  background-color: #181f7c17;
-  color: #181f7c;
+  background-color: #0b052e17;
+  color: #0b052e;
   position: relative;
   padding: 4px;
   border-radius: 50px;
@@ -648,20 +730,22 @@ h3{
 .cat-item_div {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 .sliderRight{
   width: 100%;
 }
 .cat-item{
   position: relative;
-  overflow: hidden;
+  overflow: hidden; 
   box-sizing: border-box;
   padding: 25px;
-  border-radius: 6px;
+  border-radius: 15px;
   margin: 10px 5px;
-  border: 0px solid #f2f3ff;
-  box-shadow: 0px 2px 10px #e1e1e1;
+  border: 2px solid #f2f3ff; 
+}
+.cat-item:hover{ 
+  border: 2px solid #c8cbf3; 
 }
 .cat-item a{
   transition: 0.3s ease-in-out;
@@ -672,11 +756,11 @@ h3{
 }
 .cat-item h3{
   font-size: 18px;
-  color: #181f7c;
+  color: #0b052e;
 }
 .cat-item p{
   font-size: 14px;
-  color: #7a7a7a;
+  color: #333;
 }
 .cat-item img{
     width: 60px;
@@ -705,7 +789,7 @@ h3{
   text-decoration: underline; 
 }
 .sliderRight .slick-slide div{ 
-    margin-right: 15px;
+    margin-right: 5px;
 }
 .sliderRight .slick-next,.sliderRight  .slick-prev{
   width: 40px;
@@ -714,7 +798,7 @@ h3{
     text-align: center;
     border-radius: 50%;
     line-height: 1;
-    border: 2px solid #d9d4c6!important;
+    border: 2px solid #d1d4f5!important;
     background: #fff!important;
     font-size: 13px;
     transition: all .3s ease;
@@ -831,8 +915,8 @@ h3{
 .Footer{
   position: relative;
   width: 100%;
-  background-color: #111013;
-  padding: 60px 0px;
+  background-color: #0b052e;
+  padding: 60px 0px; 
 }
 .Footer h3 a{
   color: #fff;
@@ -990,13 +1074,13 @@ h3{
   height: auto;
   max-width: 750px;
   margin: 0 auto;
-  border-top: 10px solid #181f7c17;
-  border-right: 10px solid #181f7c17;
-  border-left: 10px solid #181f7c17;
+  border-top: 10px solid #0b052e17;
+  border-right: 10px solid #0b052e17;
+  border-left: 10px solid #0b052e17;
   border-radius: 10px;
 }
 .tectTitle span{
-  color: #181f7c;
+  color: #0b052e;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 16px;
@@ -1037,24 +1121,11 @@ h3{
     transition: 0.2s ease-in-out;
     background-color: #fff;
     border-radius: 16px;
-    box-shadow: 0px 2px 10px #e1e1e1;
+    border: 2px solid #f2f3ff;
     max-width: 100%;
-}
-.techSinfo:hover{ 
-    border: 2px solid #30378938;
-}
-.job_div li:hover{   
-    transition: 0.2s ease-in-out;
-    background-color: #0a0e46; 
-    box-shadow: 0px 2px 10px #e1e1e1;
-    max-width: 100%;
-    color: #fff;
 }
 .techSinfo p, .job_div p{
   color: #7a7a7a;
-}
-.job_div li:hover p{
-  color: #fff;
 }
 .job_nav{
   position: relative;
@@ -1082,75 +1153,80 @@ h3{
   margin-right: 5px;
 }
 .techSinfo span {
-position: relative;
-    display: inline-block;
-    font-size: 12px;
-    background-color: #181f7c17;
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 4px;
-    letter-spacing: 1px;
-    width: 40px;
-    height: 50px;
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  background-color: #0b052e17;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  width: 40px;
+  height: 50px;
 }
 .job_div span{
-position: relative;
-    display: inline-block;
-    background-color: #0a0e46;
-    color: #fff;
-    padding: 10px;
-    border-radius: 50px; 
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
-}
-.job_div li:hover span{
-position: relative;
-    display: inline-block;
-    background-color: #fff;
-    color: #fff;
-    padding: 10px;
-    border-radius: 50px; 
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
-}
-.job_div li:hover span i{
-  color: #0a0e46;
+  position: relative;
+  display: inline-block;
+  background-color: #e9e1ed;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50px; 
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
 }
  .job_div span i{
-  color: #fff;
-      position: absolute;
-    right: 0px;
-    bottom: 0px;
-    font-size: 24px;
-    left: 0px;
-    top: 0px;
-    margin: auto;
-    display: block;
-    width: 30px;
-    height: 30px;
+  color: #6c3685;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  font-size: 24px;
+  left: 0px;
+  top: 0px;
+  margin: auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 1.2;
 }
 .techSinfo span i {
-  color: #181f7c;
-      position: absolute;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    top: 0px;
-    margin: auto;
-    display: block;
-    width: 30px;
-    height: 30px;
+  color: #0b052e;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  top: 0px;
+  margin: auto;
+  display: block;
+  width: 30px;
+  height: 30px;
 }
 .techSinfo h5, .job_div h3{
   font-size: 22px;
   line-height: 24px;
 }
 @media (max-width: 767px){
-   
+  .heroRight{ 
+    padding-left: 0px; 
+  }
+  .Newsletter {
+    padding: 40px 0px; 
+  }
+  .NewsletterInfo a { 
+    display: inline-block;
+  }
+  .heroLeft span, .heroLeft b { 
+    font-size: 2em; 
+  } 
   .bannerSlide, .App, .Add, .slider1 { 
     padding: 30px 0px;
+  }
+  .NewsletterInfo h1 { 
+    font-size: 2em; 
+    margin-bottom: 20px;
+  }
+  .Venue_Sec { 
+      padding: 40px 0px 0px 0px;
   }
   navbar ul{
     display: none;
@@ -1162,7 +1238,7 @@ position: relative;
   .hero { 
     flex-direction: column-reverse;
         min-height: unset;
-        padding: 95px 0 0px;
+        padding: 40px 0 40px!important;
   }
   .heroLeft h1 { 
     font-size: 1.5em; 
