@@ -20,7 +20,7 @@ function Venue(){
             </div>
           </div>
           <div className="Venue"> 
-            <div className="venueInfo">   
+            <div className="venueInfo venueInfoActive">   
               <img src={v5} alt=" "/>
               <div className="venueInfoDiv">
                 <span>Development</span>

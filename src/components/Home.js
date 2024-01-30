@@ -19,7 +19,6 @@ function Home() {
       <Tips/>
       <Newsletter/>
       <Venue/>
-      <Sliders/>
     </> 
   )
 }

@@ -13,6 +13,7 @@ function Newsletter() {
             return(
               <div className="NewsletterInfo" key={curElem.id}>
                 <h1>{curElem.title}</h1>
+                <p>{curElem.desc}</p>
                 <p>{curElem.a1} {curElem.a2}</p>
               </div>
             )

@@ -254,22 +254,34 @@ header{
   background: linear-gradient(1deg, #040630d4, #01042091);
   z-index: 0;
 }
+.venueInfo.venueInfoActive:before {
+    background-image: linear-gradient(3deg, #9541bd, #0f1434);
+}
 .NewsletterInfo h1{
   color: #0b052e;
   font-size: 2.7em;
   line-height: 1.4;
-  margin-bottom: 55px;
+  margin-bottom: 15px;
   font-weight: 400;
 }
+.NewsletterInfo p{
+  position: relative;
+  display: block;
+  line-height: 26px;
+  margin-bottom: 30px; 
+}
 .NewsletterInfo a{
-  color: #fff;
-    background: #0b052e;
-    border: 1px solid #0b052e;
-    font-size: 16px;
-    font-weight: 400; 
-    padding: 12px 25px;
-    border-radius: 50px;
-    margin: 10px;
+  color: #fff; 
+  border: 1px solid #0b052e;
+  font-size: 16px;
+  font-weight: 400; 
+  padding: 12px 25px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+  margin: 10px 10px 10px 10px;
+  background: #6c3685;
+  background: linear-gradient(45deg, #6c3685, #000);
 }
 .hero{
   position: relative; 
@@ -407,8 +419,8 @@ navbar ul a:hover{
 .venueInfoDiv h2{
   color: #fff; 
   font-size: 1.7em;
-  line-height: 1.3;
-  margin: 15px 0px;
+  line-height: 1.4;
+  margin: 15px 0px 25px 0px;
   display: block;
   position: relative;
 }
@@ -629,8 +641,7 @@ h3{
   line-height: 26px;
   color: #7a7a7a;
 }
-.tipsleft button{
-  background-color: #0b052e;
+.tipsleft button{ 
   font-size: 16px;
   position: relative;
   display: block;
@@ -640,6 +651,8 @@ h3{
   border-radius: 50px;
   padding: 12px 25px; 
   cursor: pointer;
+  background: #6c3685; 
+  background: linear-gradient(45deg, #6c3685, #000);
 }
 .tipsleft ul{
   position: relative;
