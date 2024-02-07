@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FormTitle from "./FormTitle.js";
 
 function Form() {
   const [firstName, setFirstName] = useState('')  
@@ -9,28 +10,30 @@ function Form() {
   const [password, setPassword] = useState('') 
 
   return (
-    
-    <div className="main"> 
-      <div className="container">
-        <div className="form_main">
-          <div className="form_title">
-            <h2>Contact us</h2>
+    <>
+      <FormTitle/>
+      <div className="main"> 
+        <div className="container">
+          <div className="form_main">
+            <div className="form_title">
+              <h2>Contact us</h2>
+            </div>
+            <form> 
+              <label>
+                <input placeholder="First Name" onChange={(e) => setFirstName(e.target.value)} />   
+              </label>
+              <label>
+                <input placeholder="Middle Name" onChange={(e) => setFirstName(e.target.value)} />   
+              </label>
+              <label>
+                <input placeholder="Password" onChange={(e) => setPassword(e.target.value)} /> 
+              </label>
+              <button type="submit">Submit</button>
+            </form>
           </div>
-          <form> 
-            <label>
-              <input placeholder="First Name" onChange={(e) => setFirstName(e.target.value)} />   
-            </label>
-            <label>
-              <input placeholder="Middle Name" onChange={(e) => setFirstName(e.target.value)} />   
-            </label>
-            <label>
-              <input placeholder="Password" onChange={(e) => setPassword(e.target.value)} /> 
-            </label>
-            <button type="submit">Submit</button>
-          </form>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

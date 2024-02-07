@@ -20,7 +20,7 @@ function Footer(){
 								<div className="fSpace"></div>
 								<a href="#" className="fbook"><i className="fa fa-phone"></i> (123) 123 1234</a>
 							</div>
-						</div>
+						</div> 
 						<div className="footerInfoData1">
 							<div className="fMail">
 								<h3>Address</h3> 

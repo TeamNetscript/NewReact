@@ -26,6 +26,13 @@ const JobData = [
 		icon: <i className="fa fa-code fa-2x"></i>,
 		title: "Web Designer",
 		Des: "We create promotional materials and product ideas that seamlessly integrate your logo.",
+	},
+	{
+		id: 5,
+		category: "design",
+		icon: <i className="fa fa-code fa-2x"></i>,
+		title: "Web Designer",
+		Des: "We create promotional materials and product ideas that seamlessly integrate your logo.",
 	}
 ];
 

@@ -1,6 +1,6 @@
 import v5 from "./images/chart.jpg";
 import app2 from "./images/app2.png";
-import Form from './Form.js';
+import Form from './form/Form.js';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
 import React, { Component } from 'react';

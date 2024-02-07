@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Navbar from './components/Navbar.js';
 import Home from './components/Home.js';
 import Tips from './components/Tips.js';
-import Form from './components/Form.js';
+import Form from './components/form/Form.js';
 import Venue from './components/Venue.js';
 import Sliders from './components/Sliders.js';
 import Footer from './components/Footer.js';
