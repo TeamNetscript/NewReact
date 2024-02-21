@@ -15,7 +15,7 @@ function Jobs(){
 
 	return(
 		<>
-			<CareerTitle/> 
+			<CareerTitle/>
 			<div className="jobs">
 				<div className="container">
 					<div className="job">
@@ -30,7 +30,7 @@ function Jobs(){
 						<ul className="job_div">
 							{myjob.map((curElem) => {
 								return(
-									<li key={curElem.id}>
+									<li key={curElem.id}> 
 										<span>{curElem.icon}</span>
 										<h3>{curElem.title}</h3>
 										<p>{curElem.Des}</p>
