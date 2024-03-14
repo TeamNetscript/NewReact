@@ -1,6 +1,6 @@
  
 import './App.css';   
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick"; 
 import { Link } from 'react-router-dom';
 import Navbar from './components/Navbar.js';
@@ -15,6 +15,7 @@ import {BrowserRouter} from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
+
   return (   
       <BrowserRouter>
         <Navbar/>
@@ -25,7 +26,8 @@ function App() {
           <Route path="/sliders" element={<Sliders/>} />
         </Routes>
         <Footer/>
-      </BrowserRouter>  
+      </BrowserRouter>   
+    
   );
 }
 

@@ -1,17 +1,52 @@
-import JobData from "./JobData.js"
-import { useState } from 'react';
-import CareerTitle from './CareerTitle.js';
+import React, { useEffect, useState } from "react";  
+import CareerTitle from './CareerTitle.js'; 
 
-function Jobs(){
+function Jobs(){ 
+	const [apiData, setApiData] = useState({ products: [] }); 
+	const [originalData, setOriginalData] = useState([]); 
+	const [categories, setCategories] = useState([]);
+	const [activeCategory, setActiveCategory] = useState("All");
 
-	const [myjob, setJob] = useState(JobData);
+	const categoryIcons = {
+		smartphones: "fa fa-mobile",
+		laptops: "fa fa-laptop",
+		fragrances: "fa fa-wine-bottle",
+		skincare: "fa fa-spinner",
+		groceries: "fa fa-wine-bottle",
+		"home-decoration": "fa fa-home",
+		All: "fa fa-list"
+	}
 
+	useEffect(() => {
+	  const fetchData = async () => {
+		try {
+		  const response = await fetch('https://dummyjson.com/products');
+		  if (!response.ok) {
+			throw new Error('Failed to fetch data');
+		  }
+		  	const data = await response.json();
+		  	setApiData(data); 
+		  	setOriginalData(data.products);
+
+		  	const uniqueCategories = Array.from(new Set(data.products.map(product => product.category)));
+			setCategories(["All", ...uniqueCategories]); 
+		} catch (error) {
+		  console.error('Error fetching data:', error);
+		}
+	  }; 
+	  fetchData();
+	}, []);
+ 
 	const filterItem = (category) => {
-		const updatedList = JobData.filter((curElem) => {
-			return curElem.category === category;
-		});
-		setJob(updatedList);
-	};
+		const lowercaseCategory = category.toLowerCase();
+		if (lowercaseCategory  === "all") {
+		  setApiData({ ...apiData, products: originalData });  
+		} else {
+		  const updatedList = originalData.filter((curElem) => curElem.category === category);
+		  setApiData({ ...apiData, products: updatedList });
+		}
+		setActiveCategory(() => category);
+	};   
 
 	return(
 		<>
@@ -21,19 +56,22 @@ function Jobs(){
 					<div className="job">
 						<div className="job_nav"> 
 							<ul>
-								<li onClick={() => filterItem("design")}><p><i className="fa fa-code"></i>&nbsp; Web Designer</p></li>
-								<li onClick={() => filterItem("Frontend")}><p><i className="fa fa-code"></i>&nbsp; Frontend Developer</p></li>
-								<li onClick={() => filterItem("Backend")}><p><i className="fa fa-tv"></i>&nbsp; Web Developer</p></li>
-								<li onClick={() => setJob(JobData)}><p><i className="fa fa-list"></i>&nbsp; All Jobs</p></li> 
+								{categories.map((category, index) => (
+									<li key={index} onClick={() => filterItem(category)} className={activeCategory === category ? 'active' : ''}>
+									<p><i className={categoryIcons[category]}></i>&nbsp; {category.charAt(0).toUpperCase() + category.slice(1)}</p>
+									</li>
+								))}
 							</ul>
 						</div>
 						<ul className="job_div">
-							{myjob.map((curElem) => {
+							{apiData.products.map((curElem) => {
 								return(
-									<li key={curElem.id}> 
-										<span>{curElem.icon}</span>
+									<li key={curElem.id}>  
+										<img src={curElem.thumbnail} />
 										<h3>{curElem.title}</h3>
-										<p>{curElem.Des}</p>
+										<p>{curElem.description}</p>
+										<p className="price">$ {curElem.price}</p> 
+										<p>Stock: {curElem.stock}</p>
 									</li>
 									)
 								})
