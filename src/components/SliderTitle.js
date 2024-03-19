@@ -1,4 +1,3 @@
-import React, { Component } from "react";  
 
 function SliderTitle() {
   return (
@@ -13,8 +12,7 @@ function SliderTitle() {
                   <hr/>
                 </div>
                 <b> Bonorum</b>
-              </h2> 
-              <p>There are many variations of passages of Lorem Ipsum available.</p>
+              </h2>  
             </div>
             <div className="heroRight">
                
