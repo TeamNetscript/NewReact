@@ -522,10 +522,11 @@ navbar ul a:hover{
 } 
 .heroLeft p{
   display: block;
-  color: #bbbbbb;
+  color: #fff;
   margin-bottom: 30px;
   padding: 10px 30% 10px 0%;
   z-index: 1;
+  line-height: 1.8;
 }
 .heroRight div{
   position: relative;

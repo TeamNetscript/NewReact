@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { useState } from "react";
-import app1 from "./images/office1.jpg"; 
+import { useState } from "react"; 
 
 const settings = {
   dots: false,

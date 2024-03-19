@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";  
-import CareerTitle from './CareerTitle.js'; 
+import CareerTitle from './CareerTitle.js';  
 
 function Jobs(){ 
 	const [apiData, setApiData] = useState({ products: [] }); 
@@ -48,17 +48,20 @@ function Jobs(){
 		setActiveCategory(() => category);
 	};   
 
+	console.log(apiData.category);
+
 	return(
 		<>
-			<CareerTitle/>
+			<CareerTitle title="Select products here"/>
 			<div className="jobs">
 				<div className="container">
 					<div className="job">
 						<div className="job_nav"> 
+						 
 							<ul>
 								{categories.map((category, index) => (
 									<li key={index} onClick={() => filterItem(category)} className={activeCategory === category ? 'active' : ''}>
-									<p><i className={categoryIcons[category]}></i>&nbsp; {category.charAt(0).toUpperCase() + category.slice(1)}</p>
+										<p><i className={categoryIcons[category]}></i>&nbsp; {category.charAt(0).toUpperCase() + category.slice(1)}</p>
 									</li>
 								))}
 							</ul>

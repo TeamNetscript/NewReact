@@ -1,6 +1,6 @@
 import React, { Component } from "react";  
 
-function CareerTitle(props) {
+function SliderTitle() {
   return (
      <>
       <div className="main_hero">
@@ -9,11 +9,11 @@ function CareerTitle(props) {
             <div className="heroLeft">
               <h2>
                 <div>
-                  <span> {props.title} </span> 
+                  <span> Slider </span> 
                   <hr/>
                 </div>
-                <b> to boost Bonorum</b>
-              </h2>
+                <b> Bonorum</b>
+              </h2> 
               <p>There are many variations of passages of Lorem Ipsum available.</p>
             </div>
             <div className="heroRight">
@@ -26,4 +26,4 @@ function CareerTitle(props) {
   ); 
 }
  
-export default CareerTitle;
+export default SliderTitle;
