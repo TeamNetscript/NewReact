@@ -4,7 +4,7 @@ import CareerTitle from './CareerTitle.js';
 function Jobs(){ 
 	const [apiData, setApiData] = useState({ products: [] }); 
 	const [originalData, setOriginalData] = useState([]); 
-	const [categories, setCategories] = useState([]);
+	const [categories, setCategories] = useState([]); 
 	const [activeCategory, setActiveCategory] = useState("All");
 
 	const categoryIcons = {
@@ -26,7 +26,7 @@ function Jobs(){
 		  }
 		  	const data = await response.json();
 		  	setApiData(data); 
-		  	setOriginalData(data.products);
+		  	setOriginalData(data.products); 
 
 		  	const uniqueCategories = Array.from(new Set(data.products.map(product => product.category)));
 			setCategories(["All", ...uniqueCategories]); 
@@ -37,7 +37,7 @@ function Jobs(){
 	  fetchData();
 	}, []);
  
-	const filterItem = (category) => {
+	const filterItem = (category) => { 
 		const lowercaseCategory = category.toLowerCase();
 		if (lowercaseCategory  === "all") {
 		  setApiData({ ...apiData, products: originalData });  
@@ -48,7 +48,7 @@ function Jobs(){
 		setActiveCategory(() => category);
 	};   
 
-	console.log(apiData.category);
+	console.log(apiData);
 
 	return(
 		<>

@@ -5,7 +5,7 @@ import ServicesData from "./services/ServicesData.js";
 import Services from "./services/Services.js"
 
 function Tech(){
-  const[ServicesDataInit, setData] = useState(ServicesData);
+  const[ServicesDataInit, setServicesDataInit] = useState(ServicesData);
 
 	return( 
     <>

@@ -7,11 +7,11 @@ function Hero() {
       <div className="main_hero">
         <div className="container">
           <div className="hero">
-            <div className="heroLeft">
+            <div className="heroLeft"> 
               <h6>Why Us Bonorum et Malorum</h6>
               <h2>
                 <div>
-                  <span> Company </span> 
+                  <span>Company</span> 
                   <hr/>
                 </div>
                 <b> to boost your de Finibus Bonorum et Malorum</b>
@@ -24,7 +24,7 @@ function Hero() {
         </div>
         <div className="companyList">
           <div className="container">
-            <ul>
+            <ul> 
               <li>
                 <img src="images/upwork.png" alt=""/>
               </li>

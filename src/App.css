@@ -48,6 +48,52 @@
   height: auto;
   border-radius: 6px;
 }
+.login-wrapper{
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 50px;
+  border-radius: 20px; 
+  background-color: #fff;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+.login-wrapper h1{ 
+  font-size: 24px; 
+  padding: 10px 0px;
+  position: relative;
+  display: block;
+}
+.login-wrapper label{ 
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 0px;
+  position: relative;
+  display: block;
+}
+.login-wrapper input{  
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.login-wrapper button{
+  background-color: #9642be;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  display: block;
+  border: 0px;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
 .App li a:hover   img{
   opacity: 0.9;
 }
