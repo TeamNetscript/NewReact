@@ -1,6 +1,5 @@
  
-import './App.css';   
-import React, { useEffect, useState } from "react"; 
+import './App.css';    
 import Navbar from './components/Navbar.js';
 import Home from './components/Home.js'; 
 import Form from './components/form/Form.js'; 
@@ -10,10 +9,20 @@ import Jobs from './components/Jobs.js';
 import Login from './components/login/Login.js';
 import {BrowserRouter} from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
+import useToken from './components/App/useToken';
 
-function App() {
+function setToken(userToken){
+  sessionStorage.setItem('token', JSON.stringify(userToken));
+}
+function getToken(){
+  const tokenString = sessionStorage.getItem('token');
+  const userToken = JSON.parse(tokenString);
+  return userToken?.token
+}
 
-  const [token, setToken] = useState();
+function App() { 
+  
+  const { token, setToken } = useToken(); 
 
   if(!token) {
     return <Login setToken={setToken} />

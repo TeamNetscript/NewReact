@@ -75,11 +75,13 @@
   display: block;
 }
 .login-wrapper input{  
-  padding: 10px;
-  box-sizing: border-box;
-  width: 100%;
-  position: relative;
+  box-sizing: border-box; 
   display: block;
+      padding: 12px;
+    position: relative;
+    border: 1px solid #dedede;
+    width: 100%;
+    font-size: 14px;
 }
 .login-wrapper button{
   background-color: #9642be;
