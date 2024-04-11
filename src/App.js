@@ -31,13 +31,13 @@ function App() {
   return (   
       <BrowserRouter>
         <Navbar/>
-          <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/jobs" element={<Jobs/>} />
-            <Route path="/form" element={<Form/>} />
-            <Route path="/sliders" element={<Sliders/>} />
-            <Route path="/login" element={<Login/>} />
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/jobs" element={<Jobs/>} />
+          <Route path="/form" element={<Form/>} />
+          <Route path="/sliders" element={<Sliders/>} />
+          <Route path="/login" element={<Login/>} />
+        </Routes>
         <Footer/>
       </BrowserRouter>   
     

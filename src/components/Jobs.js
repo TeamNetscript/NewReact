@@ -56,8 +56,7 @@ function Jobs(){
 			<div className="jobs">
 				<div className="container">
 					<div className="job">
-						<div className="job_nav"> 
-						 
+						<div className="job_nav">  
 							<ul>
 								{categories.map((category, index) => (
 									<li key={index} onClick={() => filterItem(category)} className={activeCategory === category ? 'active' : ''}>
@@ -74,7 +73,7 @@ function Jobs(){
 										<h3>{curElem.title}</h3>
 										<p>{curElem.description}</p>
 										<p className="price">$ {curElem.price}</p> 
-										<p>Stock: {curElem.stock}</p>
+										<h5>Stock: {curElem.stock}</h5>
 									</li>
 									)
 								})

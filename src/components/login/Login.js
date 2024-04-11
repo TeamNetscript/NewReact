@@ -14,7 +14,7 @@ async function loginUser(credentials) {
 
 export default function Login({ setToken }) {
   const [username, setUserName] = useState();
-  const [password, setPassword] = useState();
+  const [password, setPassword] = useState(); 
   const [error, setError] = useState('');
 
   const handleSubmit = async e => {
@@ -22,10 +22,10 @@ export default function Login({ setToken }) {
 
     if (!username || !password) {
       setError('Username and password are required.');
-      return;
+      return; 
     }
 
-    setError('');
+    setError(''); 
 
     try {
       const token = await loginUser({ username, password });
@@ -43,13 +43,13 @@ export default function Login({ setToken }) {
   	    <label>
   	      <p>Username</p>
   	      <input type="text" value={username} onChange={e => setUserName(e.target.value)} />
-  	    </label>
+  	    </label> 
   	    <label>
   	      <p>Password</p>
   	      <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
   	    </label>
   	    {error && <div style={{ color: 'red' }}>{error}</div>}
-  	    <div>
+  	    <div> 
   	      <button type="submit">Submit</button>
   	    </div>
   	  </form>

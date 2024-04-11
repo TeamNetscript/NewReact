@@ -19,7 +19,7 @@ function Navbar() {
             </div>
           </navbar> 
         </div>
-      </header>  
+      </header>
     </>
   );
 
