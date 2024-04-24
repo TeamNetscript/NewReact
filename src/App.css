@@ -1195,7 +1195,7 @@ h3{
     padding: 10px;
     transition: 0.2s ease-in-out;
     background-color: #f9f9f9;
-    border-radius: 16px; 
+    border-radius: 0px; 
     max-width: 32%;
     box-sizing: border-box;
 }
@@ -1216,7 +1216,7 @@ position: relative;
     width: 100%;
     max-height: 250px;
     height: auto;
-    border-radius: 6px;
+    border-radius: 0px;
     margin-bottom: 20px;
     object-fit: cover;
     min-height: 250px;
@@ -1227,7 +1227,7 @@ position: relative;
   width: 20%;
 }
 .job_nav ul{
-  background-color: #f3f3f6;
+  background-color: #fbfbfb;
   border-radius: 0px;
   position: sticky;
   display: flex;
@@ -1239,19 +1239,20 @@ position: relative;
   gap: 5px;
   flex-direction: column;
   top: 10px;
+  border: 1px solid #f5f5f5;
 }
 .job_nav ul li.active{
-  background-color: #fff; 
+  background-color: #ededed; 
       border-left: 2px solid #000;
 }
 .job_nav ul li{ 
   position: relative;
   cursor: pointer;
   display: inline-block;
-  padding: 7px 25px;
+  padding: 9px 15px;
   border-radius: 0px;
   text-align: left; 
-  width: 100%;
+  width: 100%; 
   box-sizing: border-box;
       border-left: 2px solid transparent;
 }
